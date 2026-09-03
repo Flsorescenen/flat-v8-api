@@ -34,7 +34,7 @@ flat-v8-api/
 
 ## npx 一行初始化
 
-直接执行以下命令，会自动创建并安装到当前用户的 Codex `skills\flat-v8-api` 目录：
+直接在项目根目录执行以下命令，会自动创建并安装到当前项目的 `skills\flat-v8-api` 目录：
 
 ```powershell
 npx --yes github:Flsorescenen/flat-v8-api
@@ -46,7 +46,7 @@ npx --yes github:Flsorescenen/flat-v8-api
 npx --yes github:Flsorescenen/flat-v8-api .
 ```
 
-也可以显式指定 Codex 用户 skills 目录：
+也可以显式指定其他目标目录，例如 Codex 用户 skills 目录：
 
 ```powershell
 npx --yes github:Flsorescenen/flat-v8-api "$env:USERPROFILE\.codex\skills\flat-v8-api"

@@ -3,7 +3,6 @@
 'use strict';
 
 const fs = require('fs');
-const os = require('os');
 const path = require('path');
 
 const PACKAGE_ROOT = path.resolve(__dirname, '..');
@@ -11,15 +10,14 @@ const INSTALL_ENTRIES = ['SKILL.md', 'README.md', 'agents', 'references', 'scrip
 
 function printUsage() {
   console.log('用法：npx --yes github:Flsorescenen/flat-v8-api [目标目录] [--force]');
-  console.log('默认目标：当前用户的 Codex skills/flat-v8-api 目录');
+  console.log('默认目标：当前项目的 skills/flat-v8-api 目录');
   console.log('示例：npx --yes github:Flsorescenen/flat-v8-api');
   console.log('示例：npx --yes github:Flsorescenen/flat-v8-api .');
   console.log('示例：npx --yes github:Flsorescenen/flat-v8-api "$USERPROFILE/.codex/skills/flat-v8-api"');
 }
 
 function getDefaultTargetDirectory() {
-  const codexHome = process.env.CODEX_HOME || path.join(os.homedir(), '.codex');
-  return path.join(codexHome, 'skills', 'flat-v8-api');
+  return path.join(process.cwd(), 'skills', 'flat-v8-api');
 }
 
 function fail(message) {
