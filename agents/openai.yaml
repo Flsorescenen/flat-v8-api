@@ -1,0 +1,6 @@
+interface:
+  display_name: "Flat V8 API"
+  short_description: "查询并调用 Flat V8 SDK 与前端接口"
+  default_prompt: "使用 $flat-v8-api 根据 Flat V8 Swagger 文档解释接口或生成调用代码。"
+policy:
+  allow_implicit_invocation: true
