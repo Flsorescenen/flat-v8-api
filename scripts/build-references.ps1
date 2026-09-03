@@ -9,6 +9,7 @@ $referenceRoot = Join-Path $skillRoot 'references'
 if ($Refresh) {
   Invoke-WebRequest -UseBasicParsing -Uri 'http://192.168.1.11:30179/flatsdk/swagger/v1/swagger.json' -OutFile (Join-Path $referenceRoot 'v8-sdk-api.json')
   Invoke-WebRequest -UseBasicParsing -Uri 'http://192.168.1.11:30179/flatdms/swagger/Document/swagger.json' -OutFile (Join-Path $referenceRoot 'v8-frontend-api.json')
+  Invoke-WebRequest -UseBasicParsing -Uri 'http://192.168.1.11:30179/flatdocs/help-doc/md/sdk-error-code-full.md' -OutFile (Join-Path $referenceRoot 'sdk-error-code-full.md')
 }
 
 function Get-CompactSchema {

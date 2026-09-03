@@ -6,6 +6,7 @@
 
 - Flat V8 SDK API：298 个接口、581 个模型
 - V8 前端文档 API：256 个接口、507 个模型
+- SDK 错误码对照表：包含错误码、错误说明和错误常量
 - 两份原始 OpenAPI 3.0.1 JSON 文档
 - 自动生成的接口索引和模型字段索引
 - Swagger 文档刷新及索引生成脚本
@@ -27,7 +28,8 @@ flat-v8-api/
 │   ├── v8-sdk-models.md
 │   ├── v8-frontend-api.json
 │   ├── v8-frontend-api.md
-│   └── v8-frontend-models.md
+│   ├── v8-frontend-models.md
+│   └── sdk-error-code-full.md
 └── scripts/
     └── build-references.ps1
 ```
@@ -109,12 +111,20 @@ http://192.168.1.11:30179/flatdms/swagger/Document/swagger.json
 powershell -ExecutionPolicy Bypass -File .\scripts\build-references.ps1 -Refresh
 ```
 
-该命令会重新拉取两份 JSON，并生成接口索引和模型索引。确认内容无误后提交 Git：
+该命令会重新拉取两份 JSON、错误码表，并生成接口索引和模型索引。确认内容无误后提交 Git：
 
 ```powershell
 git add .
 git commit -m "更新 Flat V8 Swagger 文档"
 git push
+```
+
+## SDK 错误码对照表
+
+错误码对照表维护在 [references/sdk-error-code-full.md](references/sdk-error-code-full.md)，每条记录包含数字错误码、错误说明和错误常量。原始来源：
+
+```text
+http://192.168.1.11:30179/flatdocs/help-doc/index.html#sdk-error-code-full
 ```
 
 ## 从 Git 仓库发布
