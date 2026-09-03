@@ -16,6 +16,9 @@
 flat-v8-api/
 ├── SKILL.md
 ├── README.md
+├── package.json
+├── bin/
+│   └── install.js
 ├── agents/
 │   └── openai.yaml
 ├── references/
@@ -29,6 +32,26 @@ flat-v8-api/
     └── build-references.ps1
 ```
 
+## npx 一行初始化
+
+在一个空目录中执行以下命令，可直接从 GitHub 拉取并初始化 skill：
+
+```powershell
+npx --yes github:Flsorescenen/flat-v8-api .
+```
+
+如果要直接安装到 Codex 用户 skills 目录，执行：
+
+```powershell
+npx --yes github:Flsorescenen/flat-v8-api "$env:USERPROFILE\.codex\skills\flat-v8-api"
+```
+
+目标目录已经存在时，如确认要覆盖更新，添加 `--force`：
+
+```powershell
+npx --yes github:Flsorescenen/flat-v8-api "$env:USERPROFILE\.codex\skills\flat-v8-api" --force
+```
+
 ## 安装到 Codex
 
 ### 方式一：直接克隆到用户 skills 目录
@@ -37,6 +60,12 @@ flat-v8-api/
 
 ```powershell
 git clone <仓库地址> "$env:USERPROFILE\.codex\skills\flat-v8-api"
+```
+
+本仓库可直接使用以下命令拉取并安装：
+
+```powershell
+git clone https://github.com/Flsorescenen/flat-v8-api.git "$env:USERPROFILE\.codex\skills\flat-v8-api"
 ```
 
 如果目标目录已经存在，先进入目录更新：

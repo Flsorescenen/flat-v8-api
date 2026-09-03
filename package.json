@@ -1,0 +1,25 @@
+{
+  "name": "flat-v8-api",
+  "version": "1.0.0",
+  "description": "Flat V8 API Codex skill installer",
+  "bin": {
+    "flat-v8-api": "bin/install.js"
+  },
+  "files": [
+    "SKILL.md",
+    "README.md",
+    "agents",
+    "references",
+    "scripts",
+    "bin",
+    "package.json"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Flsorescenen/flat-v8-api.git"
+  },
+  "license": "MIT"
+}
