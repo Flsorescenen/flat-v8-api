@@ -34,13 +34,19 @@ flat-v8-api/
 
 ## npx 一行初始化
 
-在一个空目录中执行以下命令，可直接从 GitHub 拉取并初始化 skill：
+直接执行以下命令，会自动创建并安装到当前用户的 Codex `skills\flat-v8-api` 目录：
+
+```powershell
+npx --yes github:Flsorescenen/flat-v8-api
+```
+
+如果明确要安装到当前目录，才使用 `.`：
 
 ```powershell
 npx --yes github:Flsorescenen/flat-v8-api .
 ```
 
-如果要直接安装到 Codex 用户 skills 目录，执行：
+也可以显式指定 Codex 用户 skills 目录：
 
 ```powershell
 npx --yes github:Flsorescenen/flat-v8-api "$env:USERPROFILE\.codex\skills\flat-v8-api"
